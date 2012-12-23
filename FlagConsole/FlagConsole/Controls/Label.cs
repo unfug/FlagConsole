@@ -1,4 +1,5 @@
-﻿using FlagConsole.Drawing;
+﻿using FlagConsole.Controls;
+using FlagConsole.Drawing;
 using System;
 using System.Collections.Generic;
 
@@ -23,7 +24,17 @@ namespace FlagConsole.Controls
         /// <value>
         /// The text that is displayed in the label.
         /// </value>
-        public string Text { get; set; }
+        /// 
+        private string _text;
+        public string Text
+        {
+            get { return this._text; }
+            set
+            {
+                this._text = value;
+                this.Invalidate();
+            }
+        }
 
         /// <summary>
         /// Draws the control.
@@ -53,6 +64,7 @@ namespace FlagConsole.Controls
             {
                 do
                 {
+
                     string line = String.Empty;
                     bool first = true;
 
