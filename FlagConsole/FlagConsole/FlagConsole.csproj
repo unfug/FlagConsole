@@ -38,7 +38,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\BooleanButton.cs" />
+    <Compile Include="Controls\Switch.cs" />
     <Compile Include="Controls\Container.cs" />
     <Compile Include="Controls\Control.cs" />
     <Compile Include="Controls\Counter.cs" />
