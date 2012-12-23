@@ -42,6 +42,7 @@ namespace FlagConsole.Controls
         {
             this.IsFocused = false;
             this.ForegroundColor = ConsoleColor.Black;
+            this.BackgroundColor = ConsoleColor.White;
             OnFocusChanged(EventArgs.Empty);
         
         }
@@ -50,6 +51,7 @@ namespace FlagConsole.Controls
         {
             this.IsFocused = true;
             this.ForegroundColor = ConsoleColor.DarkRed;
+            this.BackgroundColor = ConsoleColor.Magenta;
             this.IsVisible = true;
             this.ScanInput();
         }
@@ -67,7 +69,7 @@ namespace FlagConsole.Controls
             {
                 this.Invalidate();
                  key = Console.ReadKey(true);
-                if (key.Key == ConsoleKey.Spacebar)
+                if (key.Key == ConsoleKey.Spacebar || key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.DownArrow)
                 {
                     this.Value = !Value;
                 }

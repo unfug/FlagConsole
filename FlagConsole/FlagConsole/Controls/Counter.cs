@@ -43,6 +43,8 @@ namespace FlagConsole.Controls
         {
             this.IsFocused = false;
             this.ForegroundColor = ConsoleColor.Black;
+            this.BackgroundColor = ConsoleColor.White;
+            this.Invalidate();
         }
 
         public void Focus()
@@ -50,6 +52,7 @@ namespace FlagConsole.Controls
             this.IsFocused = true;
             this.IsVisible = true;
             this.ForegroundColor = ConsoleColor.DarkRed;
+            this.BackgroundColor = ConsoleColor.Magenta;
             this.ScanInput();
         }
 
